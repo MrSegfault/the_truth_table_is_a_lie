@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+trap 'clear;tput cnorm;exit 0' SIGINT SIGTERM SIGTSTP
+
 main () {
-	local tiempo potencias potencia impr ctr linea zero one cols cnorm
+	local tiempo potencias potencia impr ctr linea zero one cols
 	tiempo=$1
 
 	if [ -z "$1" ] ;then
